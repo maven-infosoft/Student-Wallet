@@ -3,14 +3,14 @@
 @{
     ViewBag.Title = "Add_School_Map";
 }
-@using (Html.BeginForm("Add_board_wies_school", "Home", FormMethod.Post))
-        {
+@using (Html.BeginForm((string)ViewBag.name, "Board", FormMethod.Post))
+{
     <div class="dialog">
-    <div class="panel-default">
+        <div class="panel-default">
 
             <table width="100%">
                 <tr>
-                    <th colspan="3" class="header">Add School Wies Board</th>
+                    <th colspan="4" class="header">Add School Wies Board</th>
                 </tr>
 
                 <tr>
@@ -27,7 +27,7 @@
 
                     <td class="subheader">@Html.DropDownList("Board", (IEnumerable<SelectListItem>)ViewBag.brd, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.bid)</td>
+                    <td>@Html.ValidationMessageFor(m => m.bid)<span id="bd"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>
@@ -39,7 +39,7 @@
 
                     <td class="subheader">@Html.DropDownList("School", (IEnumerable<SelectListItem>)ViewBag.sch, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.sid)</td>
+                    <td>@Html.ValidationMessageFor(m => m.sid)<span id="sd"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>
@@ -52,6 +52,6 @@
                     <td colspan="3">&nbsp;</td>
                 </tr>
             </table>
-    </div>
+        </div>
     </div>
 }

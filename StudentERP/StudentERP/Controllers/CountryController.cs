@@ -14,7 +14,6 @@ namespace StudentERP.Controllers
         //
         // GET: /Country/
         DatabaseOperation db = new DatabaseOperation();
-
         public ActionResult Add()
         {
             if (Session["user"] == null)
@@ -30,7 +29,7 @@ namespace StudentERP.Controllers
         [HttpPost]
         public ActionResult Add(Country country, FormCollection fcol)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 string yr = fcol.Get("Name");
                 string sp = "insertCountry";
@@ -43,7 +42,6 @@ namespace StudentERP.Controllers
 
             return View(country);
         }
-
         public ActionResult Edit(int Id)
         {
             ViewBag.name = "Edit";
@@ -72,7 +70,7 @@ namespace StudentERP.Controllers
         [HttpPost]
         public ActionResult Edit(Country country, FormCollection fcol, int id)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 string yr = fcol.Get("Name");
                 string sp = "updateCountry";
@@ -87,6 +85,7 @@ namespace StudentERP.Controllers
             return View(country);
         }
       
+   
         public ActionResult List()
         {
             if (Session["user"] == null)

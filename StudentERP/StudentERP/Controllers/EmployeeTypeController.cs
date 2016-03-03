@@ -8,7 +8,8 @@ using System.Data;
 using StudentERP.Models;
 
 namespace StudentERP.Controllers
-{    
+{
+     
     public class EmployeeTypeController : Controller
     {
         DatabaseOperation db = new DatabaseOperation();
@@ -29,7 +30,7 @@ namespace StudentERP.Controllers
         [HttpPost]
         public ActionResult Add(EmployeeType employeeType, FormCollection fcol)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 string yr = fcol.Get("emptype_name");
                 string sp = "insertEmployeeType";
@@ -42,7 +43,6 @@ namespace StudentERP.Controllers
 
             return View(employeeType);
         }
-
         public ActionResult Edit(int Id)
         {
             ViewBag.name = "Edit";
@@ -71,7 +71,7 @@ namespace StudentERP.Controllers
         [HttpPost]
         public ActionResult Edit(EmployeeType employeeType, FormCollection fcol, int id)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 string yr = fcol.Get("emptype_name");
                 string sp = "updateEmplyeeType";
@@ -85,7 +85,6 @@ namespace StudentERP.Controllers
 
             return View(employeeType);
         }
-
         public ActionResult List()
         {
             if (Session["user"] == null)

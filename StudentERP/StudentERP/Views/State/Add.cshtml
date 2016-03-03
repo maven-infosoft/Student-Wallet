@@ -7,10 +7,10 @@
 @using (Html.BeginForm("Add_state", "Home", FormMethod.Post))
 {
     <div class="dialog">
-    <div class="panel-default">
+        <div class="panel-default">
             <table width="100%">
                 <tr>
-                    <th colspan="3" class="header">Add State</th>
+                    <th colspan="4" class="header">Add State</th>
                 </tr>
 
                 <tr>
@@ -26,7 +26,7 @@
 
                     <td class="subheader">@Html.DropDownList("Country", (IEnumerable<SelectListItem>)ViewBag.country, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.cntry)</td>
+                    <td>@Html.ValidationMessageFor(m => m.cntry)<span id="cnty"></span></td>
                 </tr>
 
                 <tr>
@@ -37,9 +37,9 @@
 
                     <td class="subheader">@Html.LabelFor(lbl => lbl.stat)</td>
 
-                    <td class="subheader">@Html.TextBoxFor(txt=>txt.stat)</td>
+                    <td class="subheader">@Html.TextBoxFor(txt => txt.stat)</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.stat)</td>
+                    <td>@Html.ValidationMessageFor(m => m.stat)<span id="st"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>
@@ -53,6 +53,6 @@
                     <td colspan="3">&nbsp;</td>
                 </tr>
             </table>
+        </div>
     </div>
-</div>
 }

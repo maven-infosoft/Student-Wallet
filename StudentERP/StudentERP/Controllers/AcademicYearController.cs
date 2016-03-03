@@ -13,7 +13,7 @@ namespace StudentERP.Controllers
     public class AcademicYearController : Controller
     {
         DatabaseOperation db = new DatabaseOperation();
-
+        FillDropdownlist f = new FillDropdownlist();
         //
         // GET: /AcademicYear/
         public ActionResult Add()
@@ -22,17 +22,14 @@ namespace StudentERP.Controllers
             {
                 return RedirectToAction("Admin", "Login", false);
             }
-
-            else
-            { 
-                return View(ViewBag.name = "Add");
+            else { 
+            return View(ViewBag.name = "Add");
             }
         }
-
         [HttpPost]
         public ActionResult Add(AcademicYear academicYear, FormCollection fcol)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 string yr = fcol.Get("Year");
                 string sp = "insertAcademicYear";
@@ -45,7 +42,6 @@ namespace StudentERP.Controllers
 
             return View(academicYear);
         }
-
         public ActionResult Edit(int Id)
         {
             ViewBag.name = "Edit";
@@ -66,17 +62,15 @@ namespace StudentERP.Controllers
                         ay.Year = dt.Rows[0]["Year"].ToString();
                     }
                 }
-
                 return View("Add", ay);
             }
-
             return View("Add");
         }
 
         [HttpPost]
         public ActionResult Edit(AcademicYear academicYear, FormCollection fcol, int id)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 string yr = fcol.Get("Year");
                 string sp = "updateAcademicYear";
@@ -90,7 +84,6 @@ namespace StudentERP.Controllers
 
             return View(academicYear);
         }
-
         public ActionResult List()
         {
             List<AcademicYear> ay = new List<AcademicYear>();
@@ -120,6 +113,11 @@ namespace StudentERP.Controllers
 
         public ActionResult Add_Std_Map()
         {
+            ViewBag.stdlist = f.fillstandard();
+           
+            ViewBag.yr = f.fillacademicyear();
+            ViewBag.monthlist = f.fillmonth();
+           
             return View();
         }
 

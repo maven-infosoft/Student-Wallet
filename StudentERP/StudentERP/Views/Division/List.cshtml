@@ -7,7 +7,10 @@
 @{
     var grid = new WebGrid(Model);
     WebGridColumn[] divdetail ={
-                                  grid.Column(header:"Division",format:a=>a.name),grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_standard",new{id=a.DivisonID},"Home"))
+                                  grid.Column(header:"Division",format:a=>a.name),
+                                  grid.Column(header:"Created Date",format: (item) => string.Format("{0:dd-MM-yyyy}", item.CreatedDate)),
+                                  grid.Column(header:"Created By",format:a=>a.createdByWhom),
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Edit",new{id=a.DivisonID},"Division"))
 
                               };
 }

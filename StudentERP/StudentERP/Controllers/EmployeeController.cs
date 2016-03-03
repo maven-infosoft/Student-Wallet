@@ -10,8 +10,10 @@ namespace StudentERP.Controllers
     {
         //
         // GET: /Employee/
+        FillDropdownlist f = new FillDropdownlist();
         public ActionResult Add()
         {
+            ViewBag.emptype = f.fillemptype();
             return View();
         }
         public ActionResult List()

@@ -8,6 +8,8 @@ namespace StudentERP
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include("~/Scripts/jquery.validate*"));
+            bundles.Add(new ScriptBundle("~/bundles/jsvalidation").Include("~/Scripts/validation.js"));
             //bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
               //          "~/Scripts/jquery-{version}.js"));
 
@@ -25,9 +27,6 @@ namespace StudentERP
                    //   "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/mysheet.css"));
-
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
         }
     }
 }

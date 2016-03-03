@@ -16,5 +16,6 @@ namespace StudentERP.Models
         [Required(ErrorMessage = "{0} is mandatory.")]
         [RegularExpression("^[a-z A-Z]+$", ErrorMessage = "Please enter valid {0}.")]
         public string name { get; set; }
+
     }
 }

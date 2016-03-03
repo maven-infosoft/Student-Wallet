@@ -8,6 +8,7 @@ using System.Web.Security;
 using System.Data.SqlClient;
 using System.Data;
 
+
 namespace StudentERP.Controllers
 {
     public class LoginController : Controller
@@ -27,7 +28,7 @@ namespace StudentERP.Controllers
         [HttpPost]
         public ActionResult Admin(Login login, FormCollection col)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 string m = col.Get("email");
                 string p = col.Get("pwd");

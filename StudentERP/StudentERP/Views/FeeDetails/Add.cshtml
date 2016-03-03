@@ -4,7 +4,7 @@
     ViewBag.Title = "Add";
 }
 
-@using (Html.BeginForm("Fees_according_standard_and_shift", "Home", FormMethod.Post))
+@using (Html.BeginForm((string)ViewBag.name, "FeeDetail", FormMethod.Post))
 {
     <div class="dialog">
         <div class="panel-default">

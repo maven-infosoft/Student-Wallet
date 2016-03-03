@@ -5,14 +5,14 @@
 }
 
 
-@using (Html.BeginForm("Add_division", "Home", FormMethod.Post))
+@using (Html.BeginForm((string)ViewBag.name, "Division", FormMethod.Post))
 {
     <div class="dialog">
         <div class="panel-default">
 
             <table width="100%">
                 <tr>
-                    <th colspan="3" class="header">Add Division</th>
+                    <th colspan="4" class="header">Add Division</th>
                 </tr>
 
                 <tr>
@@ -28,7 +28,7 @@
 
                     <td class="subheader">@Html.TextBoxFor(txt => txt.Name)</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.Name)</td>
+                    <td>@Html.ValidationMessageFor(m => m.Name)<span id="div"></span></td>
                 </tr>
 
                 <tr>

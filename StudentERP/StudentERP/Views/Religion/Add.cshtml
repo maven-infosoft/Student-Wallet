@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Add";
 }
-@using (Html.BeginForm("Add_religon", "Home", FormMethod.Post))
+@using (Html.BeginForm((string)ViewBag.name, "Religion", FormMethod.Post))
 {
 
     <div class="dialog">
@@ -12,7 +12,7 @@
 
             <table width="100%">
                 <tr>
-                    <th colspan="3" class="header">Add Religion</th>
+                    <th colspan="4" class="header">Add Religion</th>
                 </tr>
 
                 <tr>
@@ -28,7 +28,7 @@
 
                     <td class="subheader">@Html.TextBoxFor(txt => txt.Name)</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.Name)</td>
+                    <td>@Html.ValidationMessageFor(m => m.Name)<span id="rg"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>

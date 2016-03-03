@@ -10,8 +10,12 @@ namespace StudentERP.Controllers
     {
         //
         // GET: /ClassTeacher/
+        FillDropdownlist f = new FillDropdownlist();
         public ActionResult Add()
         {
+            ViewBag.standard = f.fillstandard();
+            ViewBag.div = f.filldivision();
+            ViewBag.yr = f.fillacademicyear();
             return View();
         }
         public ActionResult List()

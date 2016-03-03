@@ -6,12 +6,15 @@ using System.Web.Mvc;
 
 namespace StudentERP.Controllers
 {
+    
     public class StateController : Controller
     {
         //
         // GET: /State/
+        FillDropdownlist f = new FillDropdownlist();
         public ActionResult Add()
         {
+            ViewBag.country = f.fillcountry();
             return View();
         }
 

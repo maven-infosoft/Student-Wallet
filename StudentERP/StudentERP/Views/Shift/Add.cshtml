@@ -4,14 +4,14 @@
     ViewBag.Title = "Add";
 }
 
-@using (Html.BeginForm("Add_shift", "Home", FormMethod.Post))
-        {
+@using (Html.BeginForm((string)ViewBag.name, "Shift", FormMethod.Post))
+{
     <div class="dialog">
-    <div class="panel-default">
+        <div class="panel-default">
 
             <table width="100%">
                 <tr>
-                    <th colspan="3" class="header">Add Shift</th>
+                    <th colspan="4" class="header">Add Shift</th>
                 </tr>
 
                 <tr>
@@ -28,7 +28,7 @@
 
                     <td class="subheader">@Html.TextBoxFor(txt => txt.shiftName)</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.shiftName)</td>
+                    <td>@Html.ValidationMessageFor(m => m.shiftName)<span id="shft"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>
@@ -42,6 +42,6 @@
                     <td colspan="3">&nbsp;</td>
                 </tr>
             </table>
+        </div>
     </div>
-</div>
-        }
+}

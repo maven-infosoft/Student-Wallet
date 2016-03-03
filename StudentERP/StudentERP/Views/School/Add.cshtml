@@ -1,13 +1,13 @@
 ﻿@model StudentERP.Models.school
 
 @{ViewBag.Title = "Add";}
-@using (Html.BeginForm("Add_schoolDetails", "Home", FormMethod.Post))
-        {
-<div class="dialog">
-    <div class="panel-default">
+@using (Html.BeginForm((string)ViewBag.name, "School", FormMethod.Post))
+{
+    <div class="dialog">
+        <div class="panel-default">
             <table width="100%">
                 <tr>
-                    <th colspan="3" class="header">Add School</th>
+                    <th colspan="4" class="header">Add School</th>
                 </tr>
 
                 <tr>
@@ -23,7 +23,7 @@
 
                     <td class="subheader">@Html.TextBoxFor(txt => txt.schoolName)</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.schoolName)</td>
+                    <td>@Html.ValidationMessageFor(m => m.schoolName)<span id="scnm"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>
@@ -35,7 +35,7 @@
 
                     <td class="subheader">@Html.TextBoxFor(txt => txt.schoolAddress)</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.schoolAddress)</td>
+                    <td>@Html.ValidationMessageFor(m => m.schoolAddress)<span id="scadd"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>
@@ -47,7 +47,7 @@
 
                     <td class="subheader">@Html.TextBoxFor(txt => txt.schoolwebsite)</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.schoolwebsite)</td>
+                    <td>@Html.ValidationMessageFor(m => m.schoolwebsite)<span id="schweb"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>
@@ -59,7 +59,7 @@
 
                     <td class="subheader">@Html.TextBoxFor(txt => txt.office)</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.office)</td>
+                    <td>@Html.ValidationMessageFor(m => m.office)<span id="ofce"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>
@@ -71,7 +71,7 @@
 
                     <td class="subheader">@Html.TextBoxFor(txt => txt.mobNum)</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.mobNum)</td>
+                    <td>@Html.ValidationMessageFor(m => m.mobNum)<span id="mbnm"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>
@@ -84,6 +84,6 @@
                     <td colspan="3">&nbsp;</td>
                 </tr>
             </table>
+        </div>
     </div>
-</div>
-        }
+}

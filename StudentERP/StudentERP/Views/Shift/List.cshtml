@@ -8,7 +8,11 @@
     var grid = new WebGrid(Model);
     WebGridColumn[] shftdeatil ={
                                   grid.Column(header:"Shift Name",format:a=>a.shiftName),
-                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_shift","Home"))
+                                  
+                                  grid.Column(header:"Created Date",format: (item) => string.Format("{0:dd-MM-yyyy}", item.CreatedDate)),
+                                  grid.Column(header:"Created By",format:a=>a.createdByWhom),
+                                  
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Edit",new{id=a.shiftId},"Shift"))
 
                               };
 }

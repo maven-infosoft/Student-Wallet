@@ -1,16 +1,19 @@
 ﻿@model StudentERP.Models.AcademicYear
 
+
+
 @{
     ViewBag.Title = "Add";
 }
 
-@using (Html.BeginForm((string)ViewBag.name,"AcademicYear",FormMethod.Post))
+
+@using (Html.BeginForm((string)ViewBag.name, "AcademicYear", FormMethod.Post))
 {
-<div class="dialog">
-    <div class="panel-default">
+    <div class="dialog">
+        <div class="panel-default">
             <table width="100%">
                 <tr>
-                    <th colspan="3" class="header">Add Acadamic Year</th>
+                    <th colspan="4" class="header">Add Acadamic Year</th>
                 </tr>
 
                 <tr>
@@ -26,7 +29,7 @@
 
                     <td class="subheader">@Html.TextBoxFor(txt => txt.Year, new { id = "txt1", @placeholder = "2014-2015" })</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.Year)</td>
+                    <td>@Html.ValidationMessageFor(m => m.Year)<span id="yr"></span></td>
                 </tr>
 
                 <tr>
@@ -41,6 +44,6 @@
                     <td colspan="3">&nbsp;</td>
                 </tr>
             </table>
+        </div>
     </div>
-</div>
 }

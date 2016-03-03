@@ -4,14 +4,14 @@
     ViewBag.Title = "Add_Std_Div_Map";
 }
 
-@using (Html.BeginForm("Add_Std_div_shift", "Home", FormMethod.Post))
-        {
-<div class="dialog">
-    <div class="panel-default">
+@using (Html.BeginForm((string)ViewBag.name, "Shift", FormMethod.Post))
+{
+    <div class="dialog">
+        <div class="panel-default">
 
             <table width="100%">
                 <tr>
-                    <th colspan="3" class="header">Fees</th>
+                    <th colspan="4" class="header">Fees</th>
                 </tr>
 
                 <tr>
@@ -27,7 +27,7 @@
 
                     <td class="subheader">@Html.DropDownList("Standard", (IEnumerable<SelectListItem>)ViewBag.standard, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.std)</td>
+                    <td>@Html.ValidationMessageFor(m => m.std)<span id="sd"></span></td>
                 </tr>
 
                 <tr>
@@ -40,7 +40,7 @@
 
                     <td class="subheader">@Html.DropDownList("Division", (IEnumerable<SelectListItem>)ViewBag.div, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.div)</td>
+                    <td>@Html.ValidationMessageFor(m => m.div)<span id="dv"></span></td>
                 </tr>
 
                 <tr>
@@ -53,7 +53,7 @@
 
                     <td class="subheader">@Html.DropDownList("Shift", (IEnumerable<SelectListItem>)ViewBag.shift, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.shft)</td>
+                    <td>@Html.ValidationMessageFor(m => m.shft)<span id="sf"></span></td>
                 </tr>
 
                 <tr>
@@ -66,7 +66,7 @@
 
                     <td class="subheader">@Html.DropDownList("AcadamicYear", (IEnumerable<SelectListItem>)ViewBag.yr, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.ayear)</td>
+                    <td>@Html.ValidationMessageFor(m => m.ayear)<span id="yr"></span></td>
                 </tr>
 
                 <tr>
@@ -79,7 +79,7 @@
 
                     <td class="subheader">@Html.TextBoxFor(txt => txt.stime)</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.stime)</td>
+                    <td>@Html.ValidationMessageFor(m => m.stime)<span id="ste"></span></td>
                 </tr>
 
                 <tr>
@@ -92,7 +92,7 @@
 
                     <td class="subheader">@Html.TextBoxFor(txt => txt.etime)</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.etime)</td>
+                    <td>@Html.ValidationMessageFor(m => m.etime)<span id="ete"></span></td>
                 </tr>
 
                 <tr>
@@ -107,6 +107,6 @@
                     <td colspan="3">&nbsp;</td>
                 </tr>
             </table>
+        </div>
     </div>
-</div>
-        }
+}

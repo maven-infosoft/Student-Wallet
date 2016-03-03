@@ -12,7 +12,11 @@
                                   grid.Column(header:"WebSite",format:a=>a.schoolwebsite),
                                   grid.Column(header:"Ofice Number",format:a=>a.office),
                                   grid.Column(header:"Contact Number",format:a=>a.mobNum),
-                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_state",new{id=a.schoolID},"Home"))
+                                  
+                                  grid.Column(header:"Created Date",format: (item) => string.Format("{0:dd-MM-yyyy}", item.CreatedDate)),
+                                  grid.Column(header:"Created By",format:a=>a.createdByWhom),
+                                  
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Edit",new{id=a.schoolID},"School"))
 
                               };
 }

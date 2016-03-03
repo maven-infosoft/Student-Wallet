@@ -4,14 +4,14 @@
     ViewBag.Title = "Add";
 }
 
-@using (Html.BeginForm((string)ViewBag.name, "City",FormMethod.Post))
+@using (Html.BeginForm("Add_city", "Home", FormMethod.Post))
 {
     <div class="dialog">
         <div class="panel-default">
 
             <table width="100%">
                 <tr>
-                    <th colspan="3" class="header">Add City</th>
+                    <th colspan="4" class="header">Add City</th>
                 </tr>
 
                 <tr>
@@ -27,7 +27,7 @@
 
                     <td class="subheader">@Html.DropDownList("State", (IEnumerable<SelectListItem>)ViewBag.state, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.stat)</td>
+                    <td>@Html.ValidationMessageFor(m => m.stat)<span id="sta"></span></td>
                 </tr>
 
                 <tr>
@@ -40,7 +40,7 @@
 
                     <td class="subheader">@Html.TextBoxFor(txt => txt.cty)</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.cty)</td>
+                    <td>@Html.ValidationMessageFor(m => m.cty)<span id="ct"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>

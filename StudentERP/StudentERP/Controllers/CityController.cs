@@ -14,6 +14,7 @@ namespace StudentERP.Controllers
         DatabaseOperation db = new DatabaseOperation();
         //
         // GET: /City/
+        FillDropdownlist f = new FillDropdownlist();
         public ActionResult Add()
         {
             if (Session["user"] == null)
@@ -22,14 +23,15 @@ namespace StudentERP.Controllers
             }
             else
             {
+                ViewBag.state = f.fillstate();
                 return View(ViewBag.name = "Add");
             }
-        }
 
+        }
         [HttpPost]
         public ActionResult Add(City city, FormCollection fcol)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 string yr = fcol.Get("Name");
                 string si = fcol.Get("StateID");
@@ -44,7 +46,6 @@ namespace StudentERP.Controllers
 
             return View(city);
         }
-
         public ActionResult List()
         {
             if (Session["user"] == null)
@@ -105,7 +106,7 @@ namespace StudentERP.Controllers
         [HttpPost]
         public ActionResult Edit(City city, FormCollection fcol, int id)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 string name = fcol.Get("bName");
                 string sp = "updateboard";

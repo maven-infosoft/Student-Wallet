@@ -13,8 +13,8 @@ namespace StudentERP.Models
 
         [Display(Name = "Year")]
         [Required(ErrorMessage = "{0} is mandatory.")]
-        [StringLength(10, MinimumLength = 8, ErrorMessage="{0} should be minimum 8 and maximum 10 characters long.")]
-        [RegularExpression("^[0-9 -]+$", ErrorMessage="Please enter valid {0}.")]
+        [StringLength(10, MinimumLength = 8, ErrorMessage = "{0} should be minimum 8 and maximum 10 characters long.")]
+        [RegularExpression("^[0-9 -]+$", ErrorMessage = "Please enter valid {0}.")]
         public string Year { get; set; }
 
 
@@ -27,7 +27,6 @@ namespace StudentERP.Models
 
         public String createdByWhom { get; set; }
     }
-
     public class AcademicYearStandardMapping
     {
         public int yearStandardId { get; set; }

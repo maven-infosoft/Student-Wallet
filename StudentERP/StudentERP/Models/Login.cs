@@ -19,7 +19,7 @@ namespace StudentERP.Models
 
         [Display(Name = "Password")]
         [Required(ErrorMessage = "{0} is mandatory.")]
-        [StringLength(15, MinimumLength = 6, ErrorMessage="Length of the password should be within 6 to 15.")]
+        [StringLength(15, MinimumLength = 6, ErrorMessage = "Length of the password should be within 6 to 15.")]
         public string pwd { get; set; }
     }
 }

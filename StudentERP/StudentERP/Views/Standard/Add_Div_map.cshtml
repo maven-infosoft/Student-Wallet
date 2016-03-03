@@ -4,13 +4,13 @@
     ViewBag.Title = "Add_Div_map";
 }
 
-@using (Html.BeginForm("Add_standard_wies_division", "Home", FormMethod.Post))
+@using (Html.BeginForm((string)ViewBag.name, "Standard", FormMethod.Post))
 {
-<div class="dialog">
-    <div class="panel-default">
+    <div class="dialog">
+        <div class="panel-default">
             <table width="100%">
                 <tr>
-                    <th colspan="3" class="header">Add Standard Wies Division</th>
+                    <th colspan="4" class="header">Add Standard Wies Division</th>
                 </tr>
 
                 <tr>
@@ -26,7 +26,7 @@
 
                     <td class="subheader">@Html.DropDownList("Standard", (IEnumerable<SelectListItem>)ViewBag.standard, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.std)</td>
+                    <td>@Html.ValidationMessageFor(m => m.std)<span id="sd"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>
@@ -38,7 +38,7 @@
 
                     <td class="subheader">@Html.DropDownList("Division", (IEnumerable<SelectListItem>)ViewBag.div, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.divi)</td>
+                    <td>@Html.ValidationMessageFor(m => m.divi)<span id="dv"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>
@@ -50,7 +50,7 @@
 
                     <td class="subheader">@Html.DropDownList("Year", (IEnumerable<SelectListItem>)ViewBag.yr, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.Year)</td>
+                    <td>@Html.ValidationMessageFor(m => m.Year)<span id="yr"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>
@@ -64,6 +64,6 @@
                     <td colspan="3">&nbsp;</td>
                 </tr>
             </table>
+        </div>
     </div>
-</div>
-        }
+}

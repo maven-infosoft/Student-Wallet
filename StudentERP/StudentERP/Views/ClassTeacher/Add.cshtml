@@ -6,15 +6,15 @@
 
 <h2>Add</h2>
 
-@using (Html.BeginForm("Add_class_teacher", "Home", FormMethod.Post))
+@using (Html.BeginForm((string)ViewBag.name, "ClassTeacher", FormMethod.Post))
 {
     <div class="dialog">
-    <div class="panel-default">
+        <div class="panel-default">
 
-        
+
             <table width="100%">
                 <tr>
-                    <th colspan="3" class="header">Add Class Teacher</th>
+                    <th colspan="4" class="header">Add Class Teacher</th>
                 </tr>
 
                 <tr>
@@ -30,7 +30,7 @@
 
                     <td class="subheader">@Html.DropDownList("TeacherName", (IEnumerable<SelectListItem>)ViewBag.teacher, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.tname)</td>
+                    <td>@Html.ValidationMessageFor(m => m.tname)<span id="tm"></span></td>
                 </tr>
 
                 <tr>
@@ -43,7 +43,7 @@
 
                     <td class="subheader">@Html.DropDownList("Standard", (IEnumerable<SelectListItem>)ViewBag.standard, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.std)</td>
+                    <td>@Html.ValidationMessageFor(m => m.std)<span id="td"></span></td>
                 </tr>
 
                 <tr>
@@ -56,7 +56,7 @@
 
                     <td class="subheader">@Html.DropDownList("Division", (IEnumerable<SelectListItem>)ViewBag.div, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.div)</td>
+                    <td>@Html.ValidationMessageFor(m => m.div)<span id="dv"></span></td>
                 </tr>
 
                 <tr>
@@ -69,7 +69,7 @@
 
                     <td class="subheader">@Html.DropDownList("AcadamicYear", (IEnumerable<SelectListItem>)ViewBag.yr, "---Select---")</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.acadyear)</td>
+                    <td>@Html.ValidationMessageFor(m => m.acadyear)<span id="ay"></span></td>
                 </tr>
 
                 <tr>
@@ -84,7 +84,7 @@
                     <td colspan="3">&nbsp;</td>
                 </tr>
             </table>
+        </div>
     </div>
-</div>
 
 }

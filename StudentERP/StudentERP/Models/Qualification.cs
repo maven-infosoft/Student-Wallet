@@ -10,6 +10,7 @@ namespace StudentERP.Models
     {
         public int QualificationId { get; set; }
 
+
         [Display(Name = "Qualification")]
         [Required(ErrorMessage = "{0} is mandatory.")]
         [RegularExpression("^[a-z . A-Z]+$", ErrorMessage = "Please enter valid {0}.")]

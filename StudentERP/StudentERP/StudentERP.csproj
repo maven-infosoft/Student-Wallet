@@ -137,6 +137,7 @@
     <Compile Include="Controllers\StateController.cs" />
     <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Controllers\SubjectTeacherController.cs" />
+    <Compile Include="FillDropdownlist.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -272,6 +273,7 @@
     <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\validation.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -319,8 +321,6 @@
     <Content Include="Views\Employee\List.cshtml" />
     <Content Include="Views\FeeDetails\Add.cshtml" />
     <Content Include="Views\FeeDetails\List.cshtml" />
-    <Content Include="Views\FeeHeads\Add.cshtml" />
-    <Content Include="Views\FeeHeads\List.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Login\Admin.cshtml" />
     <Content Include="Views\Occupation\Add.cshtml" />
@@ -352,6 +352,8 @@
     <Content Include="Views\Subject\List_Std_Map.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\FeeSection\Add.cshtml" />
+    <Content Include="Views\FeeSection\List.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -4,14 +4,14 @@
     ViewBag.Title = "Add";
 }
 
-        @using (Html.BeginForm((string)ViewBag.name, "Board", FormMethod.Post))
-        {
-            <div class="dialog">
-    <div class="panel-default">
+@using (Html.BeginForm((string)ViewBag.name, "Board", FormMethod.Post))
+{
+    <div class="dialog">
+        <div class="panel-default">
 
             <table width="100%">
                 <tr>
-                    <th colspan="3" class="header">Add Board</th>
+                    <th colspan="4" class="header">Add Board</th>
                 </tr>
 
                 <tr>
@@ -28,7 +28,7 @@
 
                     <td class="subheader">@Html.TextBoxFor(txt => txt.bName)</td>
 
-                    <td>@Html.ValidationMessageFor(m => m.bName)</td>
+                    <td>@Html.ValidationMessageFor(m => m.bName)<span id="bn"></span></td>
                 </tr>
                 <tr>
                     <td colspan="3">&nbsp;</td>
@@ -42,6 +42,6 @@
                     <td colspan="3">&nbsp;</td>
                 </tr>
             </table>
+        </div>
     </div>
-</div>
-        }
+}

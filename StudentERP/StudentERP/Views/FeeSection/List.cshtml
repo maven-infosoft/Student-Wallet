@@ -10,7 +10,7 @@
                                   grid.Column(header:"Name",format:a=>a.fhName),
                                   grid.Column(header:"Created Date",format: (item) => string.Format("{0:dd-MM-yyyy}", item.CreatedDate)),
                                   grid.Column(header:"Created By",format:a=>a.createdByWhom),
-                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Edit",new{id=a.DivisonID},"Division"))
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Edit",new{id=a.fhID},"Division"))
                               };
 }
 <div class="dialog">

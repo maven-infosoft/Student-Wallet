@@ -13,9 +13,11 @@ namespace StudentERP.Controllers
     {
         //
         // GET: /Board/
+        FillDropdownlist f = new FillDropdownlist();
         DatabaseOperation db = new DatabaseOperation();
         public ActionResult Add()
         {
+
             if (Session["user"] == null)
             {
                 return RedirectToAction("Admin", "Login", false);
@@ -24,12 +26,13 @@ namespace StudentERP.Controllers
             {
                 return View(ViewBag.name = "Add");
             }
+
         }
 
         [HttpPost]
         public ActionResult Add(Board board, FormCollection fcol)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 string yr = fcol.Get("bName");
                 string sp = "insertBoard";
@@ -42,7 +45,6 @@ namespace StudentERP.Controllers
 
             return View(board);
         }
-
         public ActionResult List()
         {
             if (Session["user"] == null)
@@ -74,7 +76,6 @@ namespace StudentERP.Controllers
                 return View(x);
             }
         }
-
         public ActionResult Edit(int Id)
         {
             ViewBag.name = "Edit";
@@ -103,7 +104,7 @@ namespace StudentERP.Controllers
         [HttpPost]
         public ActionResult Edit(Board board, FormCollection fcol, int id)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 string name = fcol.Get("bName");
                 string sp = "updateboard";
@@ -117,9 +118,10 @@ namespace StudentERP.Controllers
 
             return View(board);
         }
-
         public ActionResult Add_School_Map()
         {
+            ViewBag.brd = f.fillboard();
+            ViewBag.sch = f.fillschool();
             return View();
         }
 

@@ -10,8 +10,13 @@ namespace StudentERP.Controllers
     {
         //
         // GET: /FeeDetails/
+        FillDropdownlist f = new FillDropdownlist();
         public ActionResult Add()
         {
+            ViewBag.std = f.fillstandard();
+            ViewBag.shift = f.fillshift();
+            ViewBag.fh = f.fillfeesection();
+            ViewBag.yr = f.fillacademicyear();
             return View();
         }
         public ActionResult List()

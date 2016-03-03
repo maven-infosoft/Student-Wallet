@@ -8,7 +8,8 @@
     var grid = new WebGrid(Model);
     WebGridColumn[] subdetail ={
                                   grid.Column(header:"Occupation",format:a=>a.name),
-                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_subject",new{id=a.OccupationId},"Home"))
+                                  
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Edit",new{id=a.OccupationId},"Occupation"))
                               };
 }
 <div class="dialog">

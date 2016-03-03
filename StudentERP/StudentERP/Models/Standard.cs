@@ -21,8 +21,13 @@ namespace StudentERP.Models
         [Required(ErrorMessage = "{0} is mandatory.")]
         [RegularExpression("^[0-9]+$", ErrorMessage = "Please enter valid {0}.")]
         public int LevelOfStd { get; set; }
-    }
 
+
+        public DateTime CreatedDate { get; set; }
+        
+        
+        public string createdByWhom { get; set; }
+    }
     public class StandardDivisionMapping
     {
         public int standivid { get; set; }

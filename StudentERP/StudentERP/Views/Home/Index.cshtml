@@ -1,11 +1,12 @@
 ﻿@model StudentERP.Models.Employee
-
+    
 @{
     ViewBag.Title = "Dashboard";
     ViewBag.Header = "Dashboard";
     ViewBag.Description = "Control Panel";
     ViewBag.LevelOne = "Dashboard";
 }
+
 
 <!-- Main row -->
 <div class="row">
@@ -25,8 +26,10 @@
                     </div>
                     <div class="box-body box-profile">
                         <img class="profile-user-img img-responsive img-circle" src="~/Content/img/user2-160x160.jpg" alt="User profile picture">
-                        <h3 class="profile-username text-center">@Html.DisplayTextFor(model=>model.FirstName) &nbsp; @Html.DisplayTextFor(model=>model.LastName)</h3>
-                        <p class="text-muted text-center">@Html.DisplayTextFor(model=>model.type)</p>
+                        <h3 class="profile-username text-center">
+                            @Html.DisplayTextFor(model => model.FirstName) &nbsp; @Html.DisplayTextFor(model => model.LastName)
+                         </h3>
+                        <p class="text-muted text-center">@Html.DisplayTextFor(model => model.type)</p>
                         <ul class="list-group list-group-unbordered">
                             <li class="list-group-item">
                                 <strong><i class="fa fa-book margin-r-5"></i> Education</strong>

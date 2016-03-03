@@ -4,12 +4,16 @@
     ViewBag.Title = "List";
 }
 
-<h2>List</h2>
 
 @{
     var grid = new WebGrid(Model);
     WebGridColumn[] subdetail ={
-                                  grid.Column(header:"Subject",format:a=>a.Name),grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_subject",new{id=a.SubjectID},"Home"))
+                                  grid.Column(header:"Subject",format:a=>a.Name),
+                                  
+                                  grid.Column(header:"Created Date",format: (item) => string.Format("{0:dd-MM-yyyy}", item.CreatedDate)),
+                                  grid.Column(header:"Created By",format:a=>a.createdByWhom),
+                                  
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Edit",new{id=a.SubjectID},"Subject"))
 
                               };
 }

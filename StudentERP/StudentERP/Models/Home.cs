@@ -74,14 +74,14 @@ namespace StudentERP.Models
     public class user
     {
         [Display(Name = "Username")]
-        [Required(ErrorMessage="{0} is mandatory.")]
+        [Required(ErrorMessage = "{0} is mandatory.")]
         [RegularExpression("^[0-9]+$", ErrorMessage = "Please enter valid {0}.")]
         public string lgn { get; set; }
 
 
         [Display(Name = "Password")]
         [Required(ErrorMessage = "{0} is mandatory.")]
-        [StringLength(15, MinimumLength = 6, ErrorMessage="Length of the password should be within 6 to 15.")]
+        [StringLength(15, MinimumLength = 6, ErrorMessage = "Length of the password should be within 6 to 15.")]
         public string pwd { get; set; }
 
 

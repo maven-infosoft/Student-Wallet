@@ -13,24 +13,24 @@ namespace StudentERP.Controllers
     public class HomeController : Controller
     {
         DatabaseOperation Database = new DatabaseOperation();
-        
+
         public ActionResult Index()
         {
             if (Session["user"] == null)
                 return RedirectToAction("Admin", "Login");
-            
+
             var employee = new Employee();
             string storedProcedureName = "fetchEmployeeDetails";
             DataTable employeeTable = new DataTable();
-            
+
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("empId", Session["user"].ToString());
 
             employeeTable = Database.getdata(storedProcedureName, Parameters);
 
-            if(employeeTable.Rows.Count > 0)
+            if (employeeTable.Rows.Count > 0)
             {
-                foreach(DataRow row in employeeTable.Rows)
+                foreach (DataRow row in employeeTable.Rows)
                 {
                     employee.FirstName = row["FirstName"].ToString();
                     employee.LastName = row["LastName"].ToString();
