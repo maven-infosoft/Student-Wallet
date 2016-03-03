@@ -1,0 +1,16 @@
+﻿@model List<StudentERP.Models.Religion>
+
+@{
+    ViewBag.Title = "List";
+}
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] religiondetail ={
+                                      grid.Column(header:"Religion",format:a=>a.Name),
+                                      grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_subject",new{id=a.ReligionID},"Home"))                           
+                                    };
+}
+<div class="dialog">
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: religiondetail)
+</div>

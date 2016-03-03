@@ -1,0 +1,310 @@
+﻿@model StudentERP.Models.Employee
+
+@{
+    ViewBag.Title = "Dashboard";
+    ViewBag.Header = "Dashboard";
+    ViewBag.Description = "Control Panel";
+    ViewBag.LevelOne = "Dashboard";
+}
+
+<!-- Main row -->
+<div class="row">
+
+    <div class="col-lg-8">
+        <div class="row">
+            <div class="col-md-4 connectedSortable">
+                <!--Profile-->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <i class="fa fa-user"></i>
+                        <h3 class="box-title">Profile</h3>
+                        <div class="box-tools pull-right">
+                            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body box-profile">
+                        <img class="profile-user-img img-responsive img-circle" src="~/Content/img/user2-160x160.jpg" alt="User profile picture">
+                        <h3 class="profile-username text-center">@Html.DisplayTextFor(model=>model.FirstName) &nbsp; @Html.DisplayTextFor(model=>model.LastName)</h3>
+                        <p class="text-muted text-center">@Html.DisplayTextFor(model=>model.type)</p>
+                        <ul class="list-group list-group-unbordered">
+                            <li class="list-group-item">
+                                <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
+                                <p class="text-muted">
+                                    B.S. in Computer Science from the University of Tennessee at Knoxville
+                                </p>
+                            </li>
+                            <li class="list-group-item">
+                                <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
+                                <p>
+                                    <span class="label label-danger">UI Design</span>
+                                    <span class="label label-success">Coding</span>
+                                    <span class="label label-info">Javascript</span>
+                                    <span class="label label-warning">PHP</span>
+                                </p>
+                            </li>
+                        </ul>
+
+                        <a href="#" class="btn btn-primary btn-block"><b>View Profile</b></a>
+                    </div><!-- /.box-body -->
+                </div>
+
+            </div>
+
+            <div class="col-md-8 connectedSortable">
+                <!-- Calendar -->
+                <div class="box box-solid bg-white">
+                    <div class="box-header bg-light-blue">
+                        <i class="fa fa-calendar"></i>
+                        <h3 class="box-title">Calendar</h3>
+                        <!-- tools box -->
+                        <div class="pull-right box-tools">
+                            <!-- button with a dropdown -->
+                            <div class="btn-group">
+                                <button class="btn btn-success btn-sm dropdown-toggle bg-light-blue" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
+                                <ul class="dropdown-menu pull-right" style="z-index: 100; position: absolute" role="menu">
+                                    <li><a href="#">Add new event</a></li>
+                                    <li><a href="#">Clear events</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="pages/calendar2.html">View calendar</a></li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-success btn-sm bg-light-blue" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            <button class="btn btn-success btn-sm bg-light-blue" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div><!-- /. tools -->
+                    </div><!-- /.box-header -->
+                    <div class="box-body no-padding">
+                        <!--The calendar -->
+                        <div id="calendar" style="width: 100%"></div>
+                    </div><!-- /.box-body -->
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 connectedSortable">
+                <!--Time Table-->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <i class="fa fa-table"></i>
+                        <h3 class="box-title">Time Table</h3>
+                        <div class="box-tools pull-right">
+                            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>TIME</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>08:00 TO 09:00</td>
+                                    <td>Gujarati</td>
+                                    <td>Maths</td>
+                                    <td>General Knowledge</td>
+                                    <td>Environment</td>
+                                    <td>English</td>
+                                    <td>Social Science</td>
+                                </tr>
+
+                                <tr>
+                                    <td>09:00 TO 10:00</td>
+                                    <td>General Knowledge</td>
+                                    <td>Maths</td>
+                                    <td>Gujarati</td>
+                                    <td>Environment</td>
+                                    <td>English</td>
+                                    <td>Social Science</td>
+                                </tr>
+
+                                <tr>
+                                    <td>10:00 TO 10:30</td>
+                                    <td colspan="6" style="text-align: center;">BREAK</td>
+                                </tr>
+
+                                <tr>
+                                    <td>10:30 TO 11:30</td>
+                                    <td>Gujarati</td>
+                                    <td>Maths</td>
+                                    <td>General Knowledge</td>
+                                    <td>Environment</td>
+                                    <td>English</td>
+                                    <td>Social Science</td>
+                                </tr>
+
+                                <tr>
+                                    <td>11:30 TO 12:30</td>
+                                    <td>Gujarati</td>
+                                    <td>Maths</td>
+                                    <td>General Knowledge</td>
+                                    <td>Environment</td>
+                                    <td>English</td>
+                                    <td>Social Science</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-4">
+        <div class="row">
+            <div class="col-md-12 connectedSortable">
+                <!--Birthdays-->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <i class="fa fa-birthday-cake"></i>
+                        <h3 class="box-title">Birthdays</h3>
+                        <div class="box-tools pull-right">
+                            <span class="label label-warning">1 New Birthday(s)</span>
+                            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div><!-- /.box-header -->
+                    <div class="box-body no-padding">
+                        <ul class="users-list clearfix">
+                            <li>
+                                <img src="~/Content/img/user1-128x128.jpg" alt="User Image">
+                                <a class="users-list-name" href="#">Alexander Pierce</a>
+                                <span class="users-list-date label-warning">Today</span>
+                            </li>
+                            <li>
+                                <img src="~/Content/img/user8-128x128.jpg" alt="User Image">
+                                <a class="users-list-name" href="#">Norman</a>
+                                <span class="users-list-date">Tomorrow</span>
+                            </li>
+                            <li>
+                                <img src="~/Content/img/user7-128x128.jpg" alt="User Image">
+                                <a class="users-list-name" href="#">Jane</a>
+                                <span class="users-list-date">12 Jan</span>
+                            </li>
+                            <li>
+                                <img src="~/Content/img/user6-128x128.jpg" alt="User Image">
+                                <a class="users-list-name" href="#">John</a>
+                                <span class="users-list-date">12 Jan</span>
+                            </li>
+                            <li>
+                                <img src="~/Content/img/user2-160x160.jpg" alt="User Image">
+                                <a class="users-list-name" href="#">Alexander</a>
+                                <span class="users-list-date">13 Jan</span>
+                            </li>
+                            <li>
+                                <img src="~/Content/img/user5-128x128.jpg" alt="User Image">
+                                <a class="users-list-name" href="#">Sarah</a>
+                                <span class="users-list-date">14 Jan</span>
+                            </li>
+                            <li>
+                                <img src="~/Content/img/user4-128x128.jpg" alt="User Image">
+                                <a class="users-list-name" href="#">Nora</a>
+                                <span class="users-list-date">15 Jan</span>
+                            </li>
+                            <li>
+                                <img src="~/Content/img/user3-128x128.jpg" alt="User Image">
+                                <a class="users-list-name" href="#">Nadia</a>
+                                <span class="users-list-date">15 Jan</span>
+                            </li>
+                        </ul><!-- /.users-list -->
+                    </div><!-- /.box-body -->
+                    <div class="box-footer text-center">
+                        <a href="javascript::" class="uppercase">View All Birthdays</a>
+                    </div><!-- /.box-footer -->
+                </div><!--/.box -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 connectedSortable">
+                <!-- Latest Members -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Latest Members</h3>
+                        <div class="box-tools pull-right">
+                            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div><!-- /.box-header -->
+                    <div class="box-body" id="recent-users">
+                        <ul class="products-list product-list-in-box">
+                            <li class="item">
+                                <div class="product-img">
+                                    <img src="~/Content/img/user4-128x128.jpg" alt="Product Image">
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript::;" class="product-title">Nina Mcintire <span class="label label-warning pull-right">Teacher</span></a>
+                                    <span class="product-description">
+                                        Subject: Environment
+                                    </span>
+                                </div>
+                            </li><!-- /.item -->
+                            <li class="item">
+                                <div class="product-img">
+                                    <img src="~/Content/img/user1-128x128.jpg" alt="Product Image">
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript::;" class="product-title">Jonathan Burke Jr. <span class="label label-info pull-right">Student</span></a>
+                                    <span class="product-description">
+                                        Standard: 8th | Division: B
+                                    </span>
+                                </div>
+                            </li><!-- /.item -->
+                            <li class="item">
+                                <div class="product-img">
+                                    <img src="~/Content/img/user7-128x128.jpg" alt="Product Image">
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript::;" class="product-title">Sarah Ross <span class="label label-info pull-right">Student</span></a>
+                                    <span class="product-description">
+                                        Standard: 5th | Division: A
+                                    </span>
+                                </div>
+                            </li><!-- /.item -->
+                            <li class="item">
+                                <div class="product-img">
+                                    <img src="~/Content/img/user6-128x128.jpg" alt="Product Image">
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript::;" class="product-title">Adam Jones <span class="label label-success pull-right">Principal</span></a>
+                                    <span class="product-description">
+                                        Department: Primary
+                                    </span>
+                                </div>
+                            </li><!-- /.item -->
+                            <li class="item">
+                                <div class="product-img">
+                                    <img src="~/Content/img/user3-128x128.jpg" alt="Product Image">
+                                </div>
+                                <div class="product-info">
+                                    <a href="javascript::;" class="product-title">Nadia Allen <span class="label label-warning pull-right">Teacher</span></a>
+                                    <span class="product-description">
+                                        Subject: Science & Technology
+                                    </span>
+                                </div>
+                            </li><!-- /.item -->
+                        </ul>
+                    </div><!-- /.box-body -->
+                    <div class="box-footer text-center">
+                        <a href="javascript::;" class="uppercase">View All Users</a>
+                    </div><!-- /.box-footer -->
+                </div><!-- /.box -->
+            </div>
+        </div>
+
+    </div>
+
+</div><!-- /.row (main row) -->

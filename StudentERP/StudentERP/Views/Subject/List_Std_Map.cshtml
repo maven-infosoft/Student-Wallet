@@ -1,0 +1,17 @@
+﻿@model List<StudentERP.Models.StandardSubjectMapping>
+
+@{
+    ViewBag.Title = "List_Std_Map";
+}
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] subdetail ={
+                                  grid.Column(header:"Standard",format:a=>a.std),grid.Column(header:"Subject",format:a=>a.sub),grid.Column(header:"Year",format:a=>a.aca),grid.Column(header:"Type",format:a=>a.type),grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_subject",new{id=a.standardvisesubject},"Home"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: subdetail)
+</div>

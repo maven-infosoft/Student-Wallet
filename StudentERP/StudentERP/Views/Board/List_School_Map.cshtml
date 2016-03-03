@@ -1,0 +1,19 @@
+﻿@model List<StudentERP.Models.BoardSchoolMapping>
+
+@{
+    ViewBag.Title = "List_School_Map";
+}
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] bsdeatil ={
+                                  grid.Column(header:"Board Name",format:a=>a.bname),
+                                   grid.Column(header:"School Name",format:a=>a.sname),
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_state",new{id=a.bsid},"Home"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: bsdeatil)
+</div>

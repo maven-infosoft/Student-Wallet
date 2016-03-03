@@ -1,0 +1,19 @@
+﻿@model List<StudentERP.Models.StandardDivisionMapping>
+
+@{
+    ViewBag.Title = "List_Div_map";
+}
+
+<h2>List_Div_map</h2>
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] subdetail ={
+                                  grid.Column(header:"Standard",format:a=>a.std),grid.Column(header:"Divison",format:a=>a.divi),grid.Column(header:"Year",format:a=>a.Year),grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_subject",new{id=a.standivid},"Home"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: subdetail)
+</div>

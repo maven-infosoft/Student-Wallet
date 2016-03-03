@@ -1,0 +1,104 @@
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\StudentERP.dll.config
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\StudentERP.dll
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\StudentERP.pdb
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\Antlr3.Runtime.dll
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\Microsoft.Web.Infrastructure.dll
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\Newtonsoft.Json.dll
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.Helpers.dll
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.Mvc.dll
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.Optimization.dll
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.Razor.dll
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.WebPages.Deployment.dll
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.WebPages.dll
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.WebPages.Razor.dll
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\WebGrease.dll
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.Helpers.xml
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.Mvc.xml
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.Optimization.xml
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.Razor.xml
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.WebPages.xml
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.WebPages.Deployment.xml
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\System.Web.WebPages.Razor.xml
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\Newtonsoft.Json.xml
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\bin\Antlr3.Runtime.pdb
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\obj\Debug\StudentERP.dll
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\obj\Debug\StudentERP.pdb
+D:\Life In RK University\Maven\Studio_Projects\StudentERP\StudentERP\obj\Debug\StudentERP.csprojResolveAssemblyReference.cache
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\StudentERP.dll.config
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\StudentERP.dll
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\StudentERP.pdb
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\Antlr3.Runtime.dll
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\Newtonsoft.Json.dll
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.Helpers.dll
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.Mvc.dll
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.Optimization.dll
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.Razor.dll
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.WebPages.Deployment.dll
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.WebPages.dll
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.WebPages.Razor.dll
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\WebGrease.dll
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.Helpers.xml
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.Mvc.xml
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.Optimization.xml
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.Razor.xml
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.WebPages.xml
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.WebPages.Deployment.xml
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\System.Web.WebPages.Razor.xml
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\Newtonsoft.Json.xml
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\bin\Antlr3.Runtime.pdb
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\obj\Debug\StudentERP.csprojResolveAssemblyReference.cache
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\obj\Debug\StudentERP.dll
+C:\Users\SONY\Documents\Visual Studio 2013\Projects\StudentERP\StudentERP\obj\Debug\StudentERP.pdb
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\StudentERP.dll.config
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\StudentERP.dll
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\StudentERP.pdb
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\Antlr3.Runtime.dll
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\Microsoft.Web.Infrastructure.dll
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\Newtonsoft.Json.dll
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.Helpers.dll
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.Mvc.dll
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.Optimization.dll
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.Razor.dll
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.WebPages.Deployment.dll
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.WebPages.dll
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.WebPages.Razor.dll
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\WebGrease.dll
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.Helpers.xml
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.Mvc.xml
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.Optimization.xml
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.Razor.xml
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.WebPages.xml
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.WebPages.Deployment.xml
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\System.Web.WebPages.Razor.xml
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\Newtonsoft.Json.xml
+E:\COmpany\FinalProect\StudentERP\StudentERP\bin\Antlr3.Runtime.pdb
+E:\COmpany\FinalProect\StudentERP\StudentERP\obj\Debug\StudentERP.csprojResolveAssemblyReference.cache
+E:\COmpany\FinalProect\StudentERP\StudentERP\obj\Debug\StudentERP.dll
+E:\COmpany\FinalProect\StudentERP\StudentERP\obj\Debug\StudentERP.pdb
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\StudentERP.dll.config
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\StudentERP.dll
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\StudentERP.pdb
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\Antlr3.Runtime.dll
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\Microsoft.Web.Infrastructure.dll
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\Newtonsoft.Json.dll
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.Helpers.dll
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.Mvc.dll
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.Optimization.dll
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.Razor.dll
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.WebPages.Deployment.dll
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.WebPages.dll
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.WebPages.Razor.dll
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\WebGrease.dll
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.Helpers.xml
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.Mvc.xml
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.Optimization.xml
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.Razor.xml
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.WebPages.xml
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.WebPages.Deployment.xml
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\System.Web.WebPages.Razor.xml
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\Newtonsoft.Json.xml
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\bin\Antlr3.Runtime.pdb
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\obj\Debug\StudentERP.csprojResolveAssemblyReference.cache
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\obj\Debug\StudentERP.dll
+D:\Life In RK University\Maven\0203\StudentERP\StudentERP\obj\Debug\StudentERP.pdb

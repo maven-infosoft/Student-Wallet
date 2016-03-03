@@ -1,0 +1,22 @@
+﻿@model List<StudentERP.Models.AcademicYear>
+
+@{
+    ViewBag.Title = "List";
+}
+
+
+    @{
+        var grid = new WebGrid(Model);
+        WebGridColumn[] AcdYeardeatil ={
+                                  
+                                           grid.Column(header:"Name",format:a=>a.Year),
+                                           grid.Column(header:"CreatedDate",format:(a)=>string.Format("{0:dd-MM-yyyy}",a.CreatedDate)),
+                                          grid.Column(header:"CreatedByWhom",format:a=>a.createdByWhom),
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Edit",new{id=a.academicId},"AcademicYear"))
+
+                              };
+    }
+    <div class="dialog">
+
+        @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: AcdYeardeatil)
+    </div>

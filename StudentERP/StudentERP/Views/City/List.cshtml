@@ -1,0 +1,18 @@
+﻿@model List<StudentERP.Models.City>
+
+@{
+    ViewBag.Title = "List";
+}
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] ctdeatil ={
+                                  grid.Column(header:"City name",format:a=>a.cty),
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Edit",new{id=a.cid},"City"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: ctdeatil)
+</div>

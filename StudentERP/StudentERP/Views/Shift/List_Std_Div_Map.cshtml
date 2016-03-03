@@ -1,0 +1,23 @@
+﻿@model List<StudentERP.Models.StandardDivisionShiftMapping>
+
+@{
+    ViewBag.Title = "List_Std_Div_Map";
+}
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] sdsdeatil ={
+                                  grid.Column(header:"Acadamic Year",format:a=>a.ayear),
+                                  grid.Column(header:"Shift",format:a=>a.shft),
+                                  grid.Column(header:"Standard",format:a=>a.std),
+                                  grid.Column(header:"Division",format:a=>a.div),
+                                  grid.Column(header:"Start time",format:a=>a.stime),
+                                  grid.Column(header:"End time",format:a=>a.etime),
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_state",new{id=a.sdsID},"Home"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: sdsdeatil)
+</div>

@@ -1,0 +1,17 @@
+﻿@model List<StudentERP.Models.AcademicYearStandardMapping>
+
+@{
+    ViewBag.Title = "List_Std_Map";
+}
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] subdetail ={
+                                  grid.Column(header:"Standard",format:a=>a.astd),grid.Column(header:"Year",format:a=>a.ayear),grid.Column(header:"StartMonth",format:a=>a.smonth),grid.Column(header:"EndMonth",format:a=>a.emonth),grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_subject",new{id=a.yearStandardId},"Home"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: subdetail)
+</div>

@@ -1,0 +1,18 @@
+﻿@model List<StudentERP.Models.Board>
+
+@{
+    ViewBag.Title = "List";
+}
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] bdeatil ={
+                                  grid.Column(header:"Name",format:a=>a.bName),
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Edit",new{id=a.bID},"Board"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: bdeatil)
+</div>

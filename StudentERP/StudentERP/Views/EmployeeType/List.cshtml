@@ -1,0 +1,16 @@
+﻿@model List<StudentERP.Models.EmployeeType>
+
+@{ViewBag.Title = "List";}
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] etdeatil ={
+                                  grid.Column(header:"Name",format:a=>a.emptype_name),
+                                  grid.Column(header:"Created Date",format: (item) => string.Format("{0:dd-MM-yyyy}", item.CreatedDate)),
+                                  grid.Column(header:"Created By",format:a=>a.createdByWhom),
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Edit",new{id=a.typeId},"EmployeeType"))
+                              };
+}
+<div class="dialog">
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: etdeatil)
+</div>

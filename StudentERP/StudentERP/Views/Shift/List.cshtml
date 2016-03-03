@@ -1,0 +1,18 @@
+﻿@model List<StudentERP.Models.shift>
+
+@{
+    ViewBag.Title = "List";
+}
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] shftdeatil ={
+                                  grid.Column(header:"Shift Name",format:a=>a.shiftName),
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_shift","Home"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: shftdeatil)
+</div>

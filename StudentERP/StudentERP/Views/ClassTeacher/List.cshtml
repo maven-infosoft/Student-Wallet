@@ -1,0 +1,17 @@
+﻿@model List<StudentERP.Models.ClassTeacher>
+
+@{
+    ViewBag.Title = "List";
+}
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] subdetail ={
+                                  grid.Column(header:"TeacherName",format:a=>a.tname),grid.Column(header:"Standard",format:a=>a.std),grid.Column(header:"Divison",format:a=>a.div),grid.Column(header:"AcadamicYear",format:a=>a.acadyear),grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_class_teacher",new{id=a.ClassTeacherID},"Home"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: subdetail)
+</div>

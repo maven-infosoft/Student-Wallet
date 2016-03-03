@@ -1,0 +1,25 @@
+﻿@model List<StudentERP.Models.Employee>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] teacherdetail ={
+                                  grid.Column(header:"Full Name",format:(a)=>a.FirstName +' '+a.MiddleName+' '+a.LastName ),
+                                  grid.Column(header:"Birth Date",  format: (item) => string.Format("{0:dd-MM-yyyy}", item.Birthdate)),
+                                  grid.Column(header:"Email",format:a=>a.Email),
+                                  grid.Column(header:"Contact No",format:a=>a.ContactNo),
+                                  grid.Column(header:"Address",format:a=>a.Address),
+                                  grid.Column(header:"Type",format:a=>a.type),
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_teacher",new{id=a.TecherId},"Home"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: teacherdetail)
+</div>

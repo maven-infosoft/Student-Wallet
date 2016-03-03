@@ -1,0 +1,47 @@
+﻿@model StudentERP.Models.Board
+
+@{
+    ViewBag.Title = "Add";
+}
+
+        @using (Html.BeginForm((string)ViewBag.name, "Board", FormMethod.Post))
+        {
+            <div class="dialog">
+    <div class="panel-default">
+
+            <table width="100%">
+                <tr>
+                    <th colspan="3" class="header">Add Board</th>
+                </tr>
+
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+                    <td class="subheader">@Html.LabelFor(lbl => lbl.bName)</td>
+
+                    <td class="subheader">@Html.TextBoxFor(txt => txt.bName)</td>
+
+                    <td>@Html.ValidationMessageFor(m => m.bName)</td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" class="incenter"><input type="submit" value="Add" class="bn" /></td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+            </table>
+    </div>
+</div>
+        }

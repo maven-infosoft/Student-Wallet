@@ -1,0 +1,18 @@
+﻿@model List<StudentERP.Models.FeeHeads>
+
+@{
+    ViewBag.Title = "List";
+}
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] fhdeatil ={
+                                  grid.Column(header:"Name",format:a=>a.fhName),
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_feeHeads",new{id=a.fhID},"Home"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: fhdeatil)
+</div>

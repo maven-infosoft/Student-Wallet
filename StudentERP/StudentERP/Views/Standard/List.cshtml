@@ -1,0 +1,22 @@
+﻿@model List<StudentERP.Models.Standard>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+@{
+    ViewBag.Title = "List_Std";
+}
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] stddetail ={
+                                  grid.Column(header:"Name",format:a=>a.name),grid.Column(header:"Level",format:a=>a.LevelOfStd),grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_standard",new{id=a.StandardId},"Home"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: stddetail)
+</div>

@@ -1,0 +1,22 @@
+﻿@model List<StudentERP.Models.school>
+
+@{
+    ViewBag.Title = "List";
+}
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] sdeatil ={
+                                  grid.Column(header:"Name",format:a=>a.schoolName),
+                                  grid.Column(header:"Address",format:a=>a.schoolAddress),
+                                  grid.Column(header:"WebSite",format:a=>a.schoolwebsite),
+                                  grid.Column(header:"Ofice Number",format:a=>a.office),
+                                  grid.Column(header:"Contact Number",format:a=>a.mobNum),
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_state",new{id=a.schoolID},"Home"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: sdeatil)
+</div>

@@ -1,0 +1,27 @@
+﻿@model StudentERP.Models.Login
+
+@{ViewBag.Title = "Admin";}
+
+@{Layout = "~/Views/Shared/Layout_Admin.cshtml";}
+
+@Styles.Render("~/Content/mysheet.css")
+
+@using (Html.BeginForm("Admin", "Login", FormMethod.Post))
+{
+    <div id="loginform">
+        <div id="mainlogin">
+            <h1>Log in</h1>
+            
+                @Html.TextBoxFor(txt => txt.email, new { @placeholder = "Username" })
+                @Html.ValidationMessageFor(txt => txt.email, "", htmlAttributes: new { @class = "text-danger" })   
+
+                @Html.PasswordFor(txt => txt.pwd, new { @placeholder = "Password" })
+                @Html.ValidationMessageFor(txt => txt.pwd, "", htmlAttributes: new { @class = "text-danger" })
+                
+                <button type="submit"><i>IN</i></button>
+            
+            <div id="note">@Html.ActionLink("Forgot your password?", "Admin_login", "Home")</div>
+        </div>
+    </div>
+}
+

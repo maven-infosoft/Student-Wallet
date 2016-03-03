@@ -1,0 +1,21 @@
+﻿@model List<StudentERP.Models.State>
+
+@{
+    ViewBag.Title = "List";
+}
+
+@{
+    var grid = new WebGrid(Model);
+    WebGridColumn[] stdeatil ={
+                                  grid.Column(header:"Name",format:a=>a.stat),
+                                  grid.Column(header:"Edit",format:(a)=>Html.ActionLink("Edit","Add_state",new{id=a.stateID},"Home"))
+
+                              };
+}
+<div class="dialog">
+
+    @grid.GetHtml(tableStyle: "PGrid", headerStyle: "Header", columns: stdeatil)
+</div>
+
+
+
